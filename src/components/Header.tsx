@@ -1,4 +1,5 @@
-import { GithubIcon, ToggleThemeIcon } from './icons'
+import { GithubIcon } from './icons'
+import { ToggleTheme } from './ToggleTheme'
 
 export default function Header () {
   return (
@@ -12,7 +13,7 @@ export default function Header () {
       >
         <GithubIcon />
       </a>
-      <ToggleThemeIcon />
+      <ToggleTheme />
     </header>
   )
 }
