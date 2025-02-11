@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "question": "¿Qué tipo de lenguaje es JavaScript?",
+    "difficulty": "Easy",
+    "options": [
+      "Compilado",
+      "Interpretado",
+      "Ambos",
+      "Ninguno"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id": 2,
+    "question": "¿Cuál de las siguientes opciones NO es un tipo de dato en JavaScript?",
+    "difficulty": "Easy",
+    "options": [
+      "String",
+      "Boolean",
+      "Character",
+      "Undefined"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "id": 3,
+    "question": "¿Cómo se declara una variable en JavaScript?",
+    "difficulty": "Easy",
+    "options": [
+      "var myVar;",
+      "let myVar;",
+      "const myVar;",
+      "Todas las anteriores"
+    ],
+    "correctAnswer": 3
+  },
+  {
+    "id": 4,
+    "question": "¿Cuál de estas palabras clave NO permite re-asignar valores?",
+    "difficulty": "Easy",
+    "options": [
+      "var",
+      "let",
+      "const",
+      "Todas permiten"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "id": 5,
+    "question": "¿Qué función se usa para mostrar mensajes en la consola?",
+    "difficulty": "Easy",
+    "options": [
+      "console.write()",
+      "console.log()",
+      "console.display()",
+      "print()"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id": 6,
+    "question": "¿Qué operador se usa para comparar estrictamente igual en JavaScript?",
+    "difficulty": "Easy",
+    "options": [
+      "==",
+      "!=",
+      "===",
+      "="
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "id": 7,
+    "question": "¿Cuál de las siguientes estructuras se usa para repetir código?",
+    "difficulty": "Easy",
+    "options": [
+      "if",
+      "switch",
+      "for",
+      "return"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "id": 8,
+    "question": "¿Qué devuelve `typeof null` en JavaScript?",
+    "difficulty": "Easy",
+    "options": [
+      "null",
+      "object",
+      "undefined",
+      "string"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id": 9,
+    "question": "¿Cuál de las siguientes NO es una forma válida de definir una función en JavaScript?",
+    "difficulty": "Easy",
+    "options": [
+      "function myFunc() {}",
+      "const myFunc = () => {}",
+      "def myFunc() {}",
+      "const myFunc = function() {}"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "id": 10,
+    "question": "¿Cuál de las siguientes afirmaciones sobre `let` y `var` es correcta?",
+    "difficulty": "Easy",
+    "options": [
+      "`let` tiene un scope global",
+      "`var` tiene un scope de bloque",
+      "`let` tiene un scope de bloque",
+      "`var` no puede ser re-declarada"
+    ],
+    "correctAnswer": 2
+  }
+]
