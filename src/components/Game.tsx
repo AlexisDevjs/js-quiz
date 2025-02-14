@@ -7,6 +7,9 @@ export default function Game () {
   const {
     questions,
     currentQuestion,
+    score,
+    showScore,
+    restartQuiz,
     handleAnswerClick,
     handleNextQuestion
   } = useQuiz()
@@ -14,6 +17,13 @@ export default function Game () {
   return (
     <div className='flex flex-col gap-6'>
       <Header />
+      {showScore && (
+        <ScoreScreen
+          score={score}
+          totalQuestions={questions.length}
+          onRestart={restartQuiz}
+        />
+      )}
       <article className='w-full sm:w-[384px] max-w-sm p-4 bg-white border border-gray-300 rounded-lg shadow-[0_5px_10px_rgba(0,0,0,0.1)] sm:p-6 dark:bg-gray-800 dark:border-gray-700'>
         <h2 className='mb-3 text-center text-base font-semibold text-gray-900 md:text-xl dark:text-white'>
           Pregunta {currentQuestion + 1}/{questions.length}
@@ -58,5 +68,25 @@ export default function Game () {
         </button>
       </article>
     </div>
+  )
+}
+
+interface ScoreScreenProps {
+  score: number
+  totalQuestions: number
+  onRestart: () => void
+}
+
+function ScoreScreen ({ score, totalQuestions, onRestart }: ScoreScreenProps) {
+  return (
+    <article>
+      <h2>Haz completado el Test!</h2>
+      <p>
+        Haz acertado: {score} de {totalQuestions} preguntas{' '}
+      </p>
+      <button type='button' onClick={onRestart}>
+        Reiniciar Test
+      </button>
+    </article>
   )
 }

@@ -30,6 +30,11 @@ export async function fetchQuestions ():Promise<Question[]> {
   }
 }
 
+export async function getLimitedQuestions (limit: number) {
+  const questions = await fetchQuestions()
+  return questions.slice(0, limit)
+}
+
 export function getButtonStyle (answerIndex: number, question: Question) {
   const { selectedAnswer, correctAnswer } = question
   const defaultStyle = 'bg-gray-50 ring ring-gray-300 hover:bg-gray-100'
