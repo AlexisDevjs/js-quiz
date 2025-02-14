@@ -61,7 +61,7 @@
   },
   {
     "id": 6,
-    "question": "¿Qué operador se usa para comparar estrictamente igual en JavaScript?",
+    "question": "¿Qué operador se usa para estrictamente igual en JavaScript?",
     "difficulty": "Easy",
     "options": [
       "==",
@@ -118,5 +118,245 @@
       "`var` no puede ser re-declarada"
     ],
     "correctAnswer": 2
+  },
+  {
+    "id": 11,
+    "question": "¿Qué función se usa para convertir un string en un número entero?",
+    "difficulty": "Easy",
+    "options": [
+      "parseInt()",
+      "parseFloat()",
+      "Number()",
+      "toInteger()"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 12,
+    "question": "¿Qué método se usa para agregar un elemento al final de un array?",
+    "difficulty": "Easy",
+    "options": [
+      "push()",
+      "unshift()",
+      "pop()",
+      "add()"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 13,
+    "question": "¿Qué método se usa para eliminar el último elemento de un array?",
+    "difficulty": "Easy",
+    "options": [
+      "shift()",
+      "splice()",
+      "pop()",
+      "remove()"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "id": 14,
+    "question": "¿Cómo se puede evitar modificar un objeto en JavaScript?",
+    "difficulty": "Easy",
+    "options": [
+      "Object.seal()",
+      "Object.freeze()",
+      "Object.lock()",
+      "delete object"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id": 15,
+    "question": "¿Cuál de estos valores es considerado falsy en JavaScript?",
+    "difficulty": "Easy",
+    "options": [
+      "{}",
+      "[]",
+      "0",
+      "\"false\""
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "id": 16,
+    "question": "¿Cómo se define una constante en JavaScript?",
+    "difficulty": "Easy",
+    "options": [
+      "let myVar;",
+      "const myVar;",
+      "var myVar;",
+      "define myVar;"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id": 17,
+    "question": "¿Qué método se usa para convertir un array en un string?",
+    "difficulty": "Easy",
+    "options": [
+      "join()",
+      "split()",
+      "concat()",
+      "toString()"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 18,
+    "question": "¿Qué devuelve `Boolean([])`?",
+    "difficulty": "Easy",
+    "options": [
+      "true",
+      "false",
+      "undefined",
+      "null"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 19,
+    "question": "¿Cuál de estos NO es un operador lógico en JavaScript?",
+    "difficulty": "Easy",
+    "options": [
+      "&&",
+      "||",
+      "!!",
+      "&"
+    ],
+    "correctAnswer": 3
+  },
+  {
+    "id": 20,
+    "question": "¿Cómo se accede al primer elemento de un array?",
+    "difficulty": "Easy",
+    "options": [
+      "array(0)",
+      "array[0]",
+      "array.first()",
+      "array.first"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id": 21,
+    "question": "¿Cuál es el resultado de `typeof NaN`?",
+    "difficulty": "Easy",
+    "options": [
+      "NaN",
+      "number",
+      "undefined",
+      "object"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id": 22,
+    "question": "¿Qué función devuelve la longitud de un string?",
+    "difficulty": "Easy",
+    "options": [
+      "size()",
+      "count()",
+      "length()",
+      "strlen()"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "id": 23,
+    "question": "¿Cómo se convierte un objeto en JSON?",
+    "difficulty": "Easy",
+    "options": [
+      "JSON.stringify()",
+      "JSON.parse()",
+      "object.toJSON()",
+      "toJSON()"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 24,
+    "question": "¿Cómo se accede a las propiedades de un objeto?",
+    "difficulty": "Easy",
+    "options": [
+      "obj(propiedad)",
+      "obj[propiedad]",
+      "obj.propiedad",
+      "2 y 3 son correctas"
+    ],
+    "correctAnswer": 3
+  },
+  {
+    "id": 25,
+    "question": "¿Cuál de estas estructuras se usa para manejar errores?",
+    "difficulty": "Easy",
+    "options": [
+      "try...catch",
+      "if...else",
+      "throw...catch",
+      "switch...case"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 26,
+    "question": "¿Qué método se usa para recorrer un array?",
+    "difficulty": "Easy",
+    "options": [
+      "map()",
+      "forEach()",
+      "reduce()",
+      "Todas las anteriores"
+    ],
+    "correctAnswer": 3
+  },
+  {
+    "id": 27,
+    "question": "¿Qué palabra clave se usa para definir una clase en JavaScript?",
+    "difficulty": "Easy",
+    "options": [
+      "class",
+      "constructor",
+      "object",
+      "new"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 28,
+    "question": "¿Cuál es el propósito de `this` en JavaScript?",
+    "difficulty": "Easy",
+    "options": [
+      "Referenciar un objeto",
+      "Crear una variable",
+      "Definir una función",
+      "Importar un módulo"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 29,
+    "question": "¿Qué método detiene la propagación de un evento?",
+    "difficulty": "Easy",
+    "options": [
+      "stop()",
+      "preventDefault()",
+      "stopPropagation()",
+      "halt()"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "id": 30,
+    "question": "¿Qué función redondea un número al entero más cercano?",
+    "difficulty": "Easy",
+    "options": [
+      "round()",
+      "ceil()",
+      "floor()",
+      "truncate()"
+    ],
+    "correctAnswer": 0
   }
 ]

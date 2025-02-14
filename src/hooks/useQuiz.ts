@@ -6,13 +6,17 @@ export function useQuiz () {
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const [score, setScore] = useState(0)
 
-  const handleAnswerClick = (index: number) => {
-    const isCorrect = index === questions[currentQuestion].correctAnswer
+  const handleAnswerClick = (answerIndex: number) => {
+    const isCorrect = answerIndex === questions[currentQuestion].correctAnswer
     setScore((prevScore) => (isCorrect ? prevScore + 1 : prevScore))
 
     const updatedQuestions = questions.map((question, index) =>
       index === currentQuestion
-        ? { ...question, selectedAnswer: index, isCorrectSelected: isCorrect }
+        ? {
+          ...question,
+          selectedAnswer: answerIndex,
+          isCorrectSelected: isCorrect
+        }
         : question
     )
 
@@ -22,7 +26,7 @@ export function useQuiz () {
   const handleNextQuestion = () => {
     const nextQuestion = currentQuestion + 1
     if (
-      questions[currentQuestion].selectedAnswer !== undefined
+      questions[currentQuestion]?.selectedAnswer !== undefined
       && currentQuestion < questions.length
     ) {
       setCurrentQuestion(nextQuestion)

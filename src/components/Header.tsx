@@ -1,19 +1,10 @@
-import { GithubIcon } from './icons'
-import { ToggleTheme } from './ToggleTheme'
+import { JavaScriptIcon } from './icons'
 
 export default function Header () {
   return (
-    <header className='flex justify-center items-center py-2 px-6 gap-5 rounded-full ring-1 ring-neutral-500/75'>
-      <a
-        href='https://github.com/AlexisDevjs/portfolio-projects/tree/master/JavaScript-Quiz'
-        target='_blank'
-        rel='noreferrer'
-        aria-label='Github'
-        title='Github'
-      >
-        <GithubIcon />
-      </a>
-      <ToggleTheme />
+    <header className='flex justify-center items-center gap-3'>
+      <JavaScriptIcon className='ring-1 ring-black/75 size-8 hover:drop-shadow-[0_0_5px_#c8bf93] dark:hover:drop-shadow-[0_0_5px_#c8c3a8]' />
+      <h1 className='text-3xl sm:text-4xl font-lato'>JavaScript Quiz</h1>
     </header>
   )
 }

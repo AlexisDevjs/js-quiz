@@ -4,7 +4,7 @@ type ChildrenProp = {
 
 export default function Container ({ children }: ChildrenProp) {
   return (
-    <div className='min-h-svh flex flex-col justify-between items-center py-4'>
+    <div className='min-h-svh flex flex-col justify-between items-center p-4'>
       {children}
     </div>
   )

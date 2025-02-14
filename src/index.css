@@ -1,6 +1,15 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
 
+@theme {
+  --color-primary: #f0db4f;
+  --color-primary-100: #ead64d;
+  --color-primary-200: #e3cf4b;
+  --color-primary-300: #dbc744;
+  --color-primary-300: #d2be3f;
+  --color-primary-400: #c8b538;
+}
+
 .theme-toggle.theme-toggle--reversed .theme-toggle__expand {
   transform: scale(-1, 1);
 }

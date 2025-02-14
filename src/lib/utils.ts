@@ -29,3 +29,18 @@ export async function fetchQuestions ():Promise<Question[]> {
     return []
   }
 }
+
+export function getButtonStyle (answerIndex: number, question: Question) {
+  const { selectedAnswer, correctAnswer } = question
+  const defaultStyle = 'bg-gray-50 ring ring-gray-300 hover:bg-gray-100 active:translate-y-0.5'
+
+  if (selectedAnswer === undefined) return defaultStyle
+
+  if (answerIndex !== selectedAnswer && answerIndex !== correctAnswer) {
+    return defaultStyle
+  }
+
+  if (answerIndex === correctAnswer) return 'bg-lime-300/70 ring ring-lime-600'
+
+  if (answerIndex === selectedAnswer) return 'bg-red-300/70 ring ring-red-600'
+}
