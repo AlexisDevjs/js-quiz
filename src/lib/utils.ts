@@ -32,9 +32,11 @@ export async function fetchQuestions ():Promise<Question[]> {
 
 export function getButtonStyle (answerIndex: number, question: Question) {
   const { selectedAnswer, correctAnswer } = question
-  const defaultStyle = 'bg-gray-50 ring ring-gray-300 hover:bg-gray-100 active:translate-y-0.5'
+  const defaultStyle = 'bg-gray-50 ring ring-gray-300 hover:bg-gray-100'
 
-  if (selectedAnswer === undefined) return defaultStyle
+  if (selectedAnswer === undefined) {
+    return `${defaultStyle} active:translate-y-0.5`
+  }
 
   if (answerIndex !== selectedAnswer && answerIndex !== correctAnswer) {
     return defaultStyle

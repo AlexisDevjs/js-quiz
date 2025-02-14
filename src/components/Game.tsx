@@ -30,7 +30,7 @@ export default function Game () {
                 disabled={
                   questions[currentQuestion]?.selectedAnswer !== undefined
                 }
-                className={`flex items-center p-2.5 text-base w-full text-gray-800 rounded-lg hover:shadow ${getButtonStyle(
+                className={`flex items-center p-2.5 text-base w-full text-gray-900 rounded-lg hover:shadow ${getButtonStyle(
                   index,
                   questions[currentQuestion]
                 )}`}
@@ -46,9 +46,9 @@ export default function Game () {
           type='button'
           onClick={handleNextQuestion}
           disabled={currentQuestion === questions.length - 1}
-          className={`text-center p-2.5 text-base bg-primary text-black rounded-lg font-semibold hover:cursor-pointer ring ring-black w-full ${
-            questions[currentQuestion]?.selectedAnswer
-              ? 'hover:bg-[#edce02] active:translate-y-0.5 opacity-100'
+          className={`text-center p-2 text-base bg-primary text-black rounded-lg font-semibold hover:cursor-pointer ring ring-black w-full ${
+            questions[currentQuestion]?.selectedAnswer !== undefined
+              ? 'hover:bg-primary-200 active:translate-y-0.5 opacity-100'
               : 'opacity-65'
           }`}
         >
