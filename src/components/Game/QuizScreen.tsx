@@ -1,29 +1,24 @@
-import { useQuiz } from '../hooks/useQuiz'
-import { getButtonStyle } from '../lib/utils'
-import Header from './Header'
-import { ArrowIcon } from './icons'
+import type { Question } from '../../../types'
+import { getButtonStyle } from '../../lib/utils'
+import Header from '../Header'
+import { ArrowIcon } from '../icons'
 
-export default function Game () {
-  const {
-    questions,
-    currentQuestion,
-    score,
-    showScore,
-    restartQuiz,
-    handleAnswerClick,
-    handleNextQuestion
-  } = useQuiz()
+interface QuizScreenProps {
+  questions: Question[]
+  currentQuestion: number
+  onAnswerClick: (index: number) => void
+  onNextQuestionClick: () => void
+}
 
+export function QuizScreen ({
+  questions,
+  currentQuestion,
+  onAnswerClick,
+  onNextQuestionClick
+}: QuizScreenProps) {
   return (
-    <div className='flex flex-col gap-6'>
+    <>
       <Header />
-      {showScore && (
-        <ScoreScreen
-          score={score}
-          totalQuestions={questions.length}
-          onRestart={restartQuiz}
-        />
-      )}
       <article className='w-full sm:w-[384px] max-w-sm p-4 bg-white border border-gray-300 rounded-lg shadow-[0_5px_10px_rgba(0,0,0,0.1)] sm:p-6 dark:bg-gray-800 dark:border-gray-700'>
         <h2 className='mb-3 text-center text-base font-semibold text-gray-900 md:text-xl dark:text-white'>
           Pregunta {currentQuestion + 1}/{questions.length}
@@ -36,11 +31,11 @@ export default function Game () {
             <li key={index}>
               <button
                 type='button'
-                onClick={() => handleAnswerClick(index)}
+                onClick={() => onAnswerClick(index)}
                 disabled={
                   questions[currentQuestion]?.selectedAnswer !== undefined
                 }
-                className={`flex items-center p-2.5 text-base w-full text-gray-900 rounded-lg hover:shadow ${getButtonStyle(
+                className={`flex items-center p-2 text-base w-full text-gray-900 rounded-lg hover:shadow ${getButtonStyle(
                   index,
                   questions[currentQuestion]
                 )}`}
@@ -54,9 +49,9 @@ export default function Game () {
         </ol>
         <button
           type='button'
-          onClick={handleNextQuestion}
+          onClick={onNextQuestionClick}
           disabled={currentQuestion === questions.length - 1}
-          className={`text-center p-2 text-base bg-primary text-black rounded-lg font-semibold hover:cursor-pointer ring ring-black w-full ${
+          className={`text-center p-1.5 text-base bg-primary text-black rounded-lg font-semibold hover:cursor-pointer ring ring-black w-full ${
             questions[currentQuestion]?.selectedAnswer !== undefined
               ? 'hover:bg-primary-200 active:translate-y-0.5 opacity-100'
               : 'opacity-65'
@@ -67,26 +62,6 @@ export default function Game () {
           </span>
         </button>
       </article>
-    </div>
-  )
-}
-
-interface ScoreScreenProps {
-  score: number
-  totalQuestions: number
-  onRestart: () => void
-}
-
-function ScoreScreen ({ score, totalQuestions, onRestart }: ScoreScreenProps) {
-  return (
-    <article>
-      <h2>Haz completado el Test!</h2>
-      <p>
-        Haz acertado: {score} de {totalQuestions} preguntas{' '}
-      </p>
-      <button type='button' onClick={onRestart}>
-        Reiniciar Test
-      </button>
-    </article>
+    </>
   )
 }
