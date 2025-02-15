@@ -14,7 +14,7 @@ export default function Game () {
   } = useQuiz()
 
   return (
-    <div className='flex flex-col gap-6'>
+    <>
       {showScore ? (
         <ScoreScreen
           score={score}
@@ -29,6 +29,6 @@ export default function Game () {
           onNextQuestionClick={handleNextQuestion}
         />
       )}
-    </div>
+    </>
   )
 }

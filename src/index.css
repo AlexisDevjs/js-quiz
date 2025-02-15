@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..600&display=swap');
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
 
@@ -8,6 +9,7 @@
   --color-primary-300: #dbc744;
   --color-primary-300: #d2be3f;
   --color-primary-400: #c8b538;
+  --font-Geist: "Geist", sans-serif;
 }
 
 .theme-toggle.theme-toggle--reversed .theme-toggle__expand {
