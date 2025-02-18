@@ -11,7 +11,7 @@ export function ScoreScreen ({
   totalQuestions,
   onRestart
 }: ScoreScreenProps) {
-  const percentage = Math.round((5 / totalQuestions) * 100)
+  const percentage = Math.round((score / totalQuestions) * 100)
   const [animatedPercentage, setAnimatedPercentage] = useState(0)
   const progressRef = useRef<SVGPathElement>(null)
 
