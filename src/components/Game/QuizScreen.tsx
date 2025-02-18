@@ -22,7 +22,7 @@ export function QuizScreen ({
   return (
     <div className='flex flex-col gap-7'>
       <Header />
-      <article className='w-full sm:w-[384px] max-w-sm p-4 bg-white border border-gray-300 rounded-md shadow-[0_5px_10px_rgba(0,0,0,0.12)] sm:p-6 dark:bg-gray-800 dark:border-gray-700'>
+      <article className='w-full sm:w-[384px] max-w-sm p-4 bg-white border border-gray-300 rounded-md shadow-lg sm:p-6 dark:bg-gray-800 dark:border-gray-700'>
         <h2 className='mb-3 text-center text-2xl font-semibold text-black dark:text-white'>
           Pregunta {currentQuestion + 1}/{questions.length}
         </h2>
