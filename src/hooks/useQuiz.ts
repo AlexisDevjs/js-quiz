@@ -3,7 +3,7 @@ import { useQuestions } from './useQuestions'
 import { getLimitedQuestions } from '../lib/utils'
 
 export function useQuiz () {
-  const { questions, updateQuestions } = useQuestions(5)
+  const { questions, updateQuestions } = useQuestions(10)
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const [score, setScore] = useState(0)
   const [showScore, setShowScore] = useState(false)
