@@ -7,6 +7,7 @@ export function useQuiz () {
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const [score, setScore] = useState(0)
   const [showScore, setShowScore] = useState(false)
+  const [showGame, setShowGame] = useState(false)
 
   const handleAnswerClick = (answerIndex: number) => {
     if (currentQuestion === questions.length - 1) {
@@ -48,13 +49,25 @@ export function useQuiz () {
     updateQuestions(newQuestions)
   }
 
+  const startGame = () => {
+    setShowGame(true)
+  }
+
+  const exitGame = () => {
+    setShowGame(false)
+    restartQuiz()
+  }
+
   return {
     questions,
     currentQuestion,
     score,
     showScore,
+    showGame,
     handleAnswerClick,
     handleNextQuestion,
+    startGame,
+    exitGame,
     restartQuiz
   }
 }

@@ -4,12 +4,14 @@ interface ScoreScreenProps {
   score: number
   totalQuestions: number
   onRestart: () => void
+  onQuitGame: () => void
 }
 
 export function ScoreScreen ({
   score,
   totalQuestions,
-  onRestart
+  onRestart,
+  onQuitGame
 }: ScoreScreenProps) {
   const percentage = Math.round((score / totalQuestions) * 100)
   const [animatedPercentage, setAnimatedPercentage] = useState(0)
@@ -204,6 +206,7 @@ export function ScoreScreen ({
         </button>
         <button
           type='button'
+          onClick={onQuitGame}
           className='w-full hover:cursor-pointer py-2 ring ring-gray-300 rounded-md'
         >
           Salir

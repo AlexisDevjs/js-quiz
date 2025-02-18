@@ -1,6 +1,7 @@
 import { QuizScreen } from './QuizScreen'
 import { useQuiz } from '../../hooks/useQuiz'
 import { ScoreScreen } from './ScoreScreen'
+import InitialScreen from './InitialScreen'
 
 export default function Game () {
   const {
@@ -8,6 +9,9 @@ export default function Game () {
     currentQuestion,
     score,
     showScore,
+    showGame,
+    startGame,
+    exitGame,
     restartQuiz,
     handleAnswerClick,
     handleNextQuestion
@@ -15,11 +19,14 @@ export default function Game () {
 
   return (
     <>
-      {showScore ? (
+      {!showGame ? (
+        <InitialScreen onStartGame={startGame} />
+      ) : showScore ? (
         <ScoreScreen
           score={score}
           totalQuestions={questions.length}
           onRestart={restartQuiz}
+          onQuitGame={exitGame}
         />
       ) : (
         <QuizScreen
