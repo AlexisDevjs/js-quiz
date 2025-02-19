@@ -114,3 +114,29 @@ export function ArrowIcon (props: SVGProps<SVGSVGElement>) {
     </svg>
   )
 }
+
+export function ScoreRingIcon (props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40 h-40'
+      viewBox='0 0 200 200'
+      {...props}
+    >
+      <defs>
+        <linearGradient id='ringGradient' x1='0%' y1='0%' x2='100%' y2='0%'>
+          <stop offset='0%' stopColor='#8b5cf6' stopOpacity={0.2} />
+          <stop offset='50%' stopColor='#3b82f6' stopOpacity={0.2} />
+          <stop offset='100%' stopColor='#60a5fa' stopOpacity={0.2} />
+        </linearGradient>
+      </defs>
+      <circle
+        cx='100'
+        cy='100'
+        r='82'
+        fill='none'
+        stroke='url(#ringGradient)'
+        strokeWidth='12'
+      />
+    </svg>
+  )
+}
