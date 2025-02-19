@@ -1,41 +1,17 @@
 import { QuizScreen } from './QuizScreen'
-import { useQuiz } from '../../hooks/useQuiz'
 import { ScoreScreen } from './ScoreScreen'
-import InitialScreen from './InitialScreen'
+import { InitialScreen } from './InitialScreen'
+import { useQuizStore } from '../../zustand/useQuizStore'
+import { GAME_STATE } from '../../lib/app-constants'
 
 export default function Game () {
-  const {
-    questions,
-    currentQuestion,
-    score,
-    showScore,
-    showGame,
-    startGame,
-    exitGame,
-    restartQuiz,
-    handleAnswerClick,
-    handleNextQuestion
-  } = useQuiz()
+  const gameState = useQuizStore((state) => state.gameState)
 
   return (
     <>
-      {!showGame ? (
-        <InitialScreen onStartGame={startGame} />
-      ) : showScore ? (
-        <ScoreScreen
-          score={score}
-          totalQuestions={questions.length}
-          onRestart={restartQuiz}
-          onQuitGame={exitGame}
-        />
-      ) : (
-        <QuizScreen
-          questions={questions}
-          currentQuestion={currentQuestion}
-          onAnswerClick={handleAnswerClick}
-          onNextQuestionClick={handleNextQuestion}
-        />
-      )}
+      {gameState === GAME_STATE.IDLE && <InitialScreen />}
+      {gameState === GAME_STATE.PLAYING && <QuizScreen />}
+      {gameState === GAME_STATE.GAME_OVER && <ScoreScreen />}
     </>
   )
 }

@@ -1,18 +1,12 @@
 import { useEffect, useRef, useState } from 'react'
+import { useQuizStore } from '../../zustand/useQuizStore'
 
-interface ScoreScreenProps {
-  score: number
-  totalQuestions: number
-  onRestart: () => void
-  onQuitGame: () => void
-}
+export function ScoreScreen () {
+  const score = useQuizStore((state) => state.score)
+  const restartQuiz = useQuizStore((state) => state.restartQuiz)
+  const quitGame = useQuizStore((state) => state.quitGame)
+  const totalQuestions = useQuizStore((state) => state.questions).length
 
-export function ScoreScreen ({
-  score,
-  totalQuestions,
-  onRestart,
-  onQuitGame
-}: ScoreScreenProps) {
   const percentage = Math.round((score / totalQuestions) * 100)
   const [animatedPercentage, setAnimatedPercentage] = useState(0)
   const progressRef = useRef<SVGPathElement>(null)
@@ -199,15 +193,15 @@ export function ScoreScreen ({
       <div className='space-y-3'>
         <button
           type='button'
-          onClick={onRestart}
+          onClick={restartQuiz}
           className='w-full bg-primary hover:bg-primary-200 hover:cursor-pointer py-2 rounded-md ring ring-black/50'
         >
           Intentar de nuevo
         </button>
         <button
           type='button'
-          onClick={onQuitGame}
-          className='w-full hover:cursor-pointer py-2 ring ring-gray-300 rounded-md'
+          onClick={quitGame}
+          className='w-full hover:cursor-pointer py-2 ring ring-gray-300 rounded-md hover:bg-gray-100'
         >
           Salir
         </button>

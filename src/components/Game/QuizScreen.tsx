@@ -1,21 +1,14 @@
-import type { Question } from '../../../types'
 import { getButtonStyle } from '../../lib/utils'
+import { useQuizStore } from '../../zustand/useQuizStore'
 import Header from '../Header'
 import { ArrowIcon } from '../icons'
 
-interface QuizScreenProps {
-  questions: Question[]
-  currentQuestion: number
-  onAnswerClick: (index: number) => void
-  onNextQuestionClick: () => void
-}
+export function QuizScreen () {
+  const questions = useQuizStore((state) => state.questions)
+  const currentQuestion = useQuizStore((state) => state.currentQuestion)
+  const selectAnswer = useQuizStore((state) => state.selectAnswer)
+  const nextQuestion = useQuizStore((state) => state.nextQuestion)
 
-export function QuizScreen ({
-  questions,
-  currentQuestion,
-  onAnswerClick,
-  onNextQuestionClick
-}: QuizScreenProps) {
   const currentQuestionData = questions[currentQuestion]
   const isSelectedAnswer = currentQuestionData?.selectedAnswer !== undefined
 
@@ -34,7 +27,7 @@ export function QuizScreen ({
             <li key={index}>
               <button
                 type='button'
-                onClick={() => onAnswerClick(index)}
+                onClick={() => selectAnswer(index)}
                 disabled={currentQuestionData?.selectedAnswer !== undefined}
                 className={`flex items-center px-5 py-2 font-semibold text-sm w-full text-gray-800/95 rounded-md hover:shadow ${getButtonStyle(
                   index,
@@ -48,7 +41,7 @@ export function QuizScreen ({
         </ol>
         <button
           type='button'
-          onClick={onNextQuestionClick}
+          onClick={nextQuestion}
           disabled={currentQuestion === questions.length - 1}
           className={`text-center p-1.5 text-base bg-primary text-black rounded-md font-medium transition-colors duration-300 hover:cursor-pointer ring ring-black w-full ${
             isSelectedAnswer
