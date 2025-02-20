@@ -6,8 +6,15 @@ export function InitialScreen () {
   const startGame = useQuizStore((state) => state.startGame)
 
   return (
-    <motion.div exit={{ opacity: 0, scale: 0 }} className='flex flex-col gap-6'>
+    <motion.div
+      exit={{ opacity: 0, scale: 0 }}
+      className='flex flex-col gap-6 justify-center items-center max-w-sm text-pretty'
+    >
       <Header />
+      <p className='text-center text-[15px] my-1 text-gray-800'>
+        ¿Eres un experto en JavaScript? Responde estas preguntas y pon a prueba
+        tus conocimientos en este entretenido quiz interactivo.
+      </p>
       <motion.button
         type='button'
         onClick={startGame}
