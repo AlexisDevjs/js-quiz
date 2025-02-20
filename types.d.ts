@@ -26,3 +26,7 @@ export interface QuizState {
   startGame: () => void
   quitGame : () => void
 }
+
+export type RefProp<T> = {
+  ref: React.RefObject<T>
+}

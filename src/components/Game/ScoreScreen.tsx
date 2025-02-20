@@ -1,8 +1,10 @@
 import { useQuizStore } from '../../zustand/useQuizStore'
 import { useScoreAnimation } from '../../hooks/useScoreAnimation'
 import { ScoreRingIcon } from '../icons'
+import { motion } from 'motion/react'
+import type { RefProp } from '../../../types'
 
-export function ScoreScreen () {
+function ScoreScreen ({ ref }: RefProp<HTMLDivElement>) {
   const score = useQuizStore((state) => state.score)
   const restartQuiz = useQuizStore((state) => state.restartQuiz)
   const quitGame = useQuizStore((state) => state.quitGame)
@@ -17,7 +19,10 @@ export function ScoreScreen () {
   } = useScoreAnimation(score, totalQuestions)
 
   return (
-    <article className='shadow-xl rounded-md border border-gray-200 text-center w-full max-w-sm mx-auto p-6'>
+    <article
+      ref={ref}
+      className='shadow-xl rounded-md border border-gray-200 text-center w-full max-w-sm mx-auto p-6'
+    >
       <div className='relative'>
         <ProgressScore
           progressRef={progressRef}
@@ -82,8 +87,10 @@ export function ScoreScreen () {
   )
 }
 
+export const AnimatedScoreScreen = motion.create(ScoreScreen)
+
 interface ProgressScoreProps {
-  progressRef: React.RefObject<SVGPathElement>
+  progressRef: React.RefObject<SVGPathElement | null>
   getColorBasedOnScore: (score: number) => string
   percentage: number
   calculateArc: (currentPercentage: number) => {
