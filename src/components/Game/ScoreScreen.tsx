@@ -2,10 +2,9 @@ import { useQuizStore } from '../../zustand/useQuizStore'
 import { useScoreAnimation } from '../../hooks/useScoreAnimation'
 import { ScoreRingIcon } from '../icons'
 import { motion } from 'motion/react'
-import type { RefProp } from '../../../types'
 
-function ScoreScreen ({ ref }: RefProp<HTMLDivElement>) {
-  const score = 10
+export function ScoreScreen () {
+  const score = useQuizStore((state) => state.score)
   const restartQuiz = useQuizStore((state) => state.restartQuiz)
   const quitGame = useQuizStore((state) => state.quitGame)
   const totalQuestions = useQuizStore((state) => state.questions).length
@@ -19,8 +18,14 @@ function ScoreScreen ({ ref }: RefProp<HTMLDivElement>) {
   } = useScoreAnimation(score, totalQuestions)
 
   return (
-    <article
-      ref={ref}
+    <motion.article
+      initial={{ opacity: 0, scale: 0 }}
+      animate={{ opacity: 1, scale: 1 }}
+      exit={{ opacity: 0, scale: 0 }}
+      transition={{
+        opacity: { duration: 0.3 },
+        scale: { duration: 0.5 }
+      }}
       className='shadow-xl rounded-md border border-gray-200 text-center w-full max-w-[370px] mx-auto p-6'
     >
       <div className='relative'>
@@ -82,11 +87,9 @@ function ScoreScreen ({ ref }: RefProp<HTMLDivElement>) {
           Salir
         </button>
       </div>
-    </article>
+    </motion.article>
   )
 }
-
-export const AnimatedScoreScreen = motion.create(ScoreScreen)
 
 interface ProgressScoreProps {
   progressRef: React.RefObject<SVGPathElement | null>
