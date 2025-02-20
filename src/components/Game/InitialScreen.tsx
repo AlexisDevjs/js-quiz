@@ -11,8 +11,8 @@ export function InitialScreen () {
       className='flex flex-col gap-6 justify-center items-center max-w-sm text-pretty'
     >
       <Header />
-      <p className='text-center text-[15px] my-1 text-gray-800'>
-        ¿Eres un experto en JavaScript? Responde estas preguntas y pon a prueba
+      <p className='text-center text-base max-w-[315px] my-1 text-gray-800 dark:text-gray-200'>
+        ¿Eres un experto en JavaScript? Pon a prueba
         tus conocimientos en este entretenido quiz interactivo.
       </p>
       <motion.button

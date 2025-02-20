@@ -28,12 +28,12 @@ export function QuizScreen () {
       <motion.article
         layout
         transition={{ duration: 0.15, ease: 'linear' }}
-        className='w-full min-w-full sm:w-[384px] max-w-sm px-4 py-6 bg-white border border-gray-300 rounded-md shadow-lg sm:p-6 dark:bg-gray-800 dark:border-gray-700'
+        className='w-full min-w-full sm:w-[384px] max-w-sm px-4 py-6 bg-white border border-gray-300 rounded-md shadow-lg sm:p-6 dark:bg-gray-800 dark:border-gray-600'
       >
-        <h2 className='mb-3 text-center text-2xl font-semibold text-black dark:text-white'>
+        <h2 className='mb-3 text-center text-2xl font-semibold text-black dark:text-gray-50'>
           Pregunta {currentQuestion + 1}/{questions.length}
         </h2>
-        <p className='text-base text-center font-medium text-zinc-800 rounded-lg p-2 h-auto'>
+        <p className='text-base text-center font-medium text-zinc-800 rounded-lg p-2 h-auto dark:text-gray-200'>
           {currentQuestionData?.question}
         </p>
         <ol className='my-4 space-y-3.5'>

@@ -26,7 +26,7 @@ export function ScoreScreen () {
         opacity: { duration: 0.3 },
         scale: { duration: 0.5 }
       }}
-      className='shadow-xl rounded-md border border-gray-200 text-center w-full max-w-[370px] mx-auto p-6'
+      className='shadow-xl rounded-md border border-gray-200 text-center w-full max-w-[370px] mx-auto p-6 dark:bg-gray-800 dark:border-gray-600'
     >
       <div className='relative'>
         <ProgressScore
@@ -38,20 +38,20 @@ export function ScoreScreen () {
         />
         <div className='absolute top-[68%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center'>
           <div className='relative'>
-            <span className='block mt-1 text-[40px] leading-8 font-bold'>
+            <span className='block mt-1 text-[40px] leading-8 font-bold dark:text-white'>
               {animatedPercentage}
             </span>
-            <span className='block text-base text-gray-500'>/100</span>
+            <span className='block text-base text-gray-500 dark:text-gray-200'>/100</span>
           </div>
           <ScoreRingIcon />
         </div>
       </div>
 
       <section className='text-center mt-7 mb-6'>
-        <span className='text-sm text-blue-500 bg-blue-100/75 py-1 px-4 font-semibold rounded-full'>
+        <span className='text-sm text-blue-500 bg-blue-100/75 dark:bg-blue-400 py-1 px-4 font-semibold rounded-full dark:text-white'>
           {score} / {totalQuestions} aciertos
         </span>
-        <h2 className='text-2xl font-bold mt-3 mb-2'>
+        <h2 className='text-2xl font-bold mt-3 mb-2 dark:text-white'>
           {percentage >= 90
             ? '¡Desempeño Sobresaliente!'
             : percentage >= 70
@@ -60,7 +60,7 @@ export function ScoreScreen () {
                 ? '¡Buen esfuerzo!'
                 : '¡Sigue practicando!'}
         </h2>
-        <p className='text-gray-500 text-[15px]'>
+        <p className='text-gray-500 text-[15px] dark:text-gray-200'>
           {percentage >= 90
             ? '¡Has dominado los conceptos modernos de JavaScript!'
             : percentage >= 70
@@ -82,7 +82,7 @@ export function ScoreScreen () {
         <button
           type='button'
           onClick={quitGame}
-          className='w-full hover:cursor-pointer py-2 ring ring-gray-300 rounded-md hover:bg-gray-100'
+          className='w-full hover:cursor-pointer py-2 ring ring-gray-300 rounded-md hover:bg-gray-100 dark:bg-transparent dark:hover:bg-gray-500 dark:ring-gray-400 dark:text-white'
         >
           Salir
         </button>
@@ -156,7 +156,7 @@ function ProgressScore ({
           GENIAL
         </textPath>
       </text>
-      <text fontSize='14' fill='#94a3b8'>
+      <text fontSize='14' className='' fill='#94a3b8'>
         <textPath href='#textPath' startOffset='96%' textAnchor='end'>
           EXCELENTE
         </textPath>

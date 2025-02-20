@@ -1,7 +1,7 @@
 export default function Footer () {
   return (
-    <footer>
-      JavaScript Quiz - Creado por Alexis
+    <footer className='dark:text-white'>
+      JavaScript Quiz - Creado por <strong>Alexis</strong>
     </footer>
   )
 }

@@ -7,6 +7,7 @@ export function GithubIcon (props: SVGProps<SVGSVGElement>) {
       width={22}
       height={22}
       fill='currentColor'
+      className='text-black dark:text-white'
       xmlns='http://www.w3.org/2000/svg'
       preserveAspectRatio='xMidYMid'
       {...props}
@@ -22,7 +23,7 @@ export function ToggleThemeIcon (props: SVGProps<SVGSVGElement>) {
       xmlns='http://www.w3.org/2000/svg'
       aria-hidden='true'
       fill='currentColor'
-      className='theme-toggle__expand size-[27px]'
+      className='theme-toggle__expand text-black dark:text-white size-[27px]'
       viewBox='0 0 32 32'
       {...props}
     >

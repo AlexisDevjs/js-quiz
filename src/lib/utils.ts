@@ -37,7 +37,7 @@ export async function getLimitedQuestions (limit: number) {
 
 export function getButtonStyle (answerIndex: number, question: Question) {
   const { selectedAnswer, correctAnswer } = question
-  const defaultStyle = 'ring ring-gray-400/40 hover:bg-gray-100 hover:shadow hover:cursor-pointer transition-all duration-200'
+  const defaultStyle = 'ring ring-gray-400/40 hover:bg-gray-100 hover:shadow hover:cursor-pointer dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white transition-all duration-200'
 
   if (selectedAnswer === undefined) {
     return defaultStyle
@@ -47,7 +47,7 @@ export function getButtonStyle (answerIndex: number, question: Question) {
     return defaultStyle
   }
 
-  if (answerIndex === correctAnswer) return 'transition-all duration-200 bg-green-500/85'
+  if (answerIndex === correctAnswer) return 'transition-all duration-200 bg-green-500/85 dark:text-white'
 
-  if (answerIndex === selectedAnswer) return 'transition-all duration-200 bg-red-500/85'
+  if (answerIndex === selectedAnswer) return 'transition-all duration-200 bg-red-500/60 dark:text-white'
 }
