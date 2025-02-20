@@ -5,7 +5,7 @@ import { motion } from 'motion/react'
 import type { RefProp } from '../../../types'
 
 function ScoreScreen ({ ref }: RefProp<HTMLDivElement>) {
-  const score = useQuizStore((state) => state.score)
+  const score = 10
   const restartQuiz = useQuizStore((state) => state.restartQuiz)
   const quitGame = useQuizStore((state) => state.quitGame)
   const totalQuestions = useQuizStore((state) => state.questions).length
@@ -21,7 +21,7 @@ function ScoreScreen ({ ref }: RefProp<HTMLDivElement>) {
   return (
     <article
       ref={ref}
-      className='shadow-xl rounded-md border border-gray-200 text-center w-full max-w-sm mx-auto p-6'
+      className='shadow-xl rounded-md border border-gray-200 text-center w-full max-w-[370px] mx-auto p-6'
     >
       <div className='relative'>
         <ProgressScore
@@ -31,20 +31,19 @@ function ScoreScreen ({ ref }: RefProp<HTMLDivElement>) {
           calculateArc={calculateArc}
           animatedPercentage={animatedPercentage}
         />
-        <div className='absolute top-[69%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center'>
+        <div className='absolute top-[68%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center'>
           <div className='relative'>
-            <span className='text-5xl font-bold'>{animatedPercentage}</span>
+            <span className='block mt-1 text-[40px] leading-8 font-bold'>
+              {animatedPercentage}
+            </span>
             <span className='block text-base text-gray-500'>/100</span>
           </div>
           <ScoreRingIcon />
         </div>
       </div>
 
-      <section className='text-center mt-8 mb-5'>
-        <span className='text-sm text-blue-500 bg-blue-100/75 py-1 px-4 font-medium rounded-full'>
-          NIVEL DE ACIERTOS
-        </span>
-        <span className='block mt-4 text-lg font-semibold'>
+      <section className='text-center mt-7 mb-6'>
+        <span className='text-sm text-blue-500 bg-blue-100/75 py-1 px-4 font-semibold rounded-full'>
           {score} / {totalQuestions} aciertos
         </span>
         <h2 className='text-2xl font-bold mt-3 mb-2'>
@@ -108,9 +107,9 @@ function ProgressScore ({
   animatedPercentage
 }: ProgressScoreProps) {
   return (
-    <svg className='w-full' viewBox='-22 -50 229 160'>
+    <svg className='w-full aspect-video' viewBox='-22 -50 229 160'>
       <path
-        d='M 10 100 A 90 90 0 1 1 175 100'
+        d='M 25 100 A 80 80 0 1 1 160 100'
         fill='none'
         stroke='#e2e8f0'
         strokeWidth='17'
@@ -118,7 +117,7 @@ function ProgressScore ({
       />
       <path
         ref={progressRef}
-        d='M 10 100 A 90 90 0 1 1 175 100'
+        d='M 25 100 A 80 80 0 1 1 160 100'
         fill='none'
         stroke={getColorBasedOnScore(percentage)}
         strokeWidth='17'
@@ -142,24 +141,20 @@ function ProgressScore ({
           <stop offset='50%' stopColor='#22c55e' />
           <stop offset='100%' stopColor='#36d26f' />
         </linearGradient>
-        <path
-          id='textPath'
-          d='M -4 102 A 105.5 101.5 0 1 1 188  104'
-          fill='none'
-        />
+        <path id='textPath' d='M 7 100 A 96 94 0 1 1 177 100' fill='none' />
       </defs>
-      <text fontSize='12' fill='#94a3b8'>
-        <textPath href='#textPath' startOffset='8%'>
+      <text fontSize='14' fill='#94a3b8'>
+        <textPath href='#textPath' startOffset='7%'>
           MAL
         </textPath>
       </text>
-      <text fontSize='12' fill='#94a3b8'>
+      <text fontSize='14' fill='#94a3b8'>
         <textPath href='#textPath' startOffset='50%' textAnchor='middle'>
           GENIAL
         </textPath>
       </text>
-      <text fontSize='12' fill='#94a3b8'>
-        <textPath href='#textPath' startOffset='95%' textAnchor='end'>
+      <text fontSize='14' fill='#94a3b8'>
+        <textPath href='#textPath' startOffset='96%' textAnchor='end'>
           EXCELENTE
         </textPath>
       </text>
