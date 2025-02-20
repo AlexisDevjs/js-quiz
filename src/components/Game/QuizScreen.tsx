@@ -20,8 +20,9 @@ export function QuizScreen () {
       exit={{ opacity: 0, scale: 0 }}
       transition={{
         opacity: { duration: 0.5 },
-        scale: { type: 'spring', bounce: 0.5, duration: 0.7 }
+        scale: { type: 'spring', bounce: 0.3, duration: 0.7 }
       }}
+      style={{ transformOrigin: 'center' }}
       className='flex flex-col gap-7'
     >
       <Header />

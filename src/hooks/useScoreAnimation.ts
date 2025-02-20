@@ -6,7 +6,7 @@ export function useScoreAnimation (score: number, totalQuestions: number) {
   const progressRef = useRef<SVGPathElement>(null)
 
   const getColorBasedOnScore = (score: number) => {
-    if (score < 69) return 'url(#gradientRed)'
+    if (score < 50) return 'url(#gradientRed)'
     if (score < 79) return 'url(#gradientYellow)'
     return 'url(#gradientGreen)'
   }

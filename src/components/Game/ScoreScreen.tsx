@@ -19,13 +19,14 @@ export function ScoreScreen () {
 
   return (
     <motion.article
-      initial={{ opacity: 0, scale: 0 }}
+      initial={{ opacity: 0, scale: 0.5 }}
       animate={{ opacity: 1, scale: 1 }}
       exit={{ opacity: 0, scale: 0 }}
       transition={{
         opacity: { duration: 0.3 },
         scale: { duration: 0.5 }
       }}
+      style={{ transformOrigin: 'center' }}
       className='shadow-xl rounded-md border border-gray-200 text-center w-full max-w-[370px] mx-auto p-6 dark:bg-gray-800 dark:border-gray-600'
     >
       <div className='relative'>
@@ -38,10 +39,16 @@ export function ScoreScreen () {
         />
         <div className='absolute top-[68%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center'>
           <div className='relative'>
-            <span className='block mt-1 text-[40px] leading-8 font-bold dark:text-white'>
+            <span
+              className={`block mt-1 ${
+                animatedPercentage === 100 ? 'text-4xl' : 'text-[40px]'
+              } leading-8 font-bold dark:text-white`}
+            >
               {animatedPercentage}
             </span>
-            <span className='block text-base text-gray-500 dark:text-gray-200'>/100</span>
+            <span className='block text-base text-gray-500 dark:text-gray-200'>
+              /100
+            </span>
           </div>
           <ScoreRingIcon />
         </div>
@@ -146,18 +153,30 @@ function ProgressScore ({
         </linearGradient>
         <path id='textPath' d='M 7 100 A 96 94 0 1 1 177 100' fill='none' />
       </defs>
-      <text fontSize='14' fill='#94a3b8'>
-        <textPath href='#textPath' startOffset='7%'>
-          MAL
+      <text
+        fontSize='17'
+        className='fill-slate-400 dark:fill-white'
+        vectorEffect='non-scaling-stroke'
+      >
+        <textPath href='#textPath' startOffset='5%'>
+          BAJO
         </textPath>
       </text>
-      <text fontSize='14' fill='#94a3b8'>
+      <text
+        fontSize='17'
+        className='fill-slate-400 dark:fill-white'
+        vectorEffect='non-scaling-stroke'
+      >
         <textPath href='#textPath' startOffset='50%' textAnchor='middle'>
-          GENIAL
+          ACEPTABLE
         </textPath>
       </text>
-      <text fontSize='14' className='' fill='#94a3b8'>
-        <textPath href='#textPath' startOffset='96%' textAnchor='end'>
+      <text
+        fontSize='17'
+        className='fill-slate-400 dark:fill-white'
+        vectorEffect='non-scaling-stroke'
+      >
+        <textPath href='#textPath' startOffset='99%' textAnchor='end'>
           EXCELENTE
         </textPath>
       </text>

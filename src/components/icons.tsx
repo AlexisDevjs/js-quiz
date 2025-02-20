@@ -133,7 +133,7 @@ export function ScoreRingIcon (props: SVGProps<SVGSVGElement>) {
       <circle
         cx='100'
         cy='100'
-        r='70'
+        r='60'
         fill='none'
         stroke='url(#ringGradient)'
         strokeWidth='12'
