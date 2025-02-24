@@ -13,350 +13,590 @@
   },
   {
     "id": 2,
-    "question": "¿Cuál de las siguientes opciones NO es un tipo de dato en JavaScript?",
+    "question": "¿Cuál es la forma correcta de declarar una variable en JavaScript moderno?",
     "difficulty": "Easy",
     "options": [
-      "String",
-      "Boolean",
-      "Character",
-      "Undefined"
+      "var x = 5;",
+      "let x = 5;",
+      "const x = 5;",
+      "variable x = 5;"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id": 3,
+    "question": "¿Qué método se utiliza para imprimir en la consola?",
+    "difficulty": "Easy",
+    "options": [
+      "console.print()",
+      "console.log()",
+      "print()",
+      "log()"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id": 4,
+    "question": "¿Cuál es el operador de igualdad estricta en JavaScript?",
+    "difficulty": "Easy",
+    "options": [
+      "==",
+      "===",
+      "=",
+      "!="
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id": 5,
+    "question": "¿Qué significa DOM en JavaScript?",
+    "difficulty": "Easy",
+    "options": [
+      "Document Object Model",
+      "Data Object Model",
+      "Document Oriented Model",
+      "Digital Ordinance Model"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 6,
+    "question": "¿Cuál es la forma correcta de escribir un comentario de una sola línea en JavaScript?",
+    "difficulty": "Easy",
+    "options": [
+      "// Este es un comentario",
+      "/* Este es un comentario */",
+      "# Este es un comentario",
+      "<!-- Este es un comentario -->"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 7,
+    "question": "¿Qué método se utiliza para agregar un elemento al final de un array?",
+    "difficulty": "Easy",
+    "options": [
+      "push()",
+      "append()",
+      "addToEnd()",
+      "insert()"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 8,
+    "question": "¿Cuál es el resultado de typeof null en JavaScript?",
+    "difficulty": "Medium",
+    "options": [
+      "null",
+      "undefined",
+      "object",
+      "number"
     ],
     "correctAnswer": 2
   },
   {
-    "id": 3,
-    "question": "¿Cómo se declara una variable en JavaScript?",
-    "difficulty": "Easy",
+    "id": 9,
+    "question": "¿Qué método se utiliza para convertir un string a un número en JavaScript?",
+    "difficulty": "Medium",
     "options": [
-      "var myVar;",
-      "let myVar;",
-      "const myVar;",
+      "parseInt()",
+      "parseFloat()",
+      "Number()",
       "Todas las anteriores"
     ],
     "correctAnswer": 3
   },
   {
-    "id": 4,
-    "question": "¿Cuál de estas palabras clave NO permite re-asignar valores?",
-    "difficulty": "Easy",
-    "options": [
-      "var",
-      "let",
-      "const",
-      "Todas permiten"
-    ],
-    "correctAnswer": 2
-  },
-  {
-    "id": 5,
-    "question": "¿Qué función se usa para mostrar mensajes en la consola?",
-    "difficulty": "Easy",
-    "options": [
-      "console.write()",
-      "console.log()",
-      "console.display()",
-      "print()"
-    ],
-    "correctAnswer": 1
-  },
-  {
-    "id": 6,
-    "question": "¿Qué operador se usa para estrictamente igual en JavaScript?",
-    "difficulty": "Easy",
-    "options": [
-      "==",
-      "!=",
-      "===",
-      "="
-    ],
-    "correctAnswer": 2
-  },
-  {
-    "id": 7,
-    "question": "¿Cuál de las siguientes estructuras se usa para repetir código?",
-    "difficulty": "Easy",
-    "options": [
-      "if",
-      "switch",
-      "for",
-      "return"
-    ],
-    "correctAnswer": 2
-  },
-  {
-    "id": 8,
-    "question": "¿Qué devuelve `typeof null` en JavaScript?",
-    "difficulty": "Easy",
-    "options": [
-      "null",
-      "object",
-      "undefined",
-      "string"
-    ],
-    "correctAnswer": 1
-  },
-  {
-    "id": 9,
-    "question": "¿Cuál de las siguientes NO es una forma válida de definir una función en JavaScript?",
-    "difficulty": "Easy",
-    "options": [
-      "function myFunc() {}",
-      "const myFunc = () => {}",
-      "def myFunc() {}",
-      "const myFunc = function() {}"
-    ],
-    "correctAnswer": 2
-  },
-  {
     "id": 10,
-    "question": "¿Cuál de las siguientes afirmaciones sobre `let` y `var` es correcta?",
-    "difficulty": "Easy",
+    "question": "¿Qué es una closure en JavaScript?",
+    "difficulty": "Medium",
     "options": [
-      "`let` tiene un scope global",
-      "`var` tiene un scope de bloque",
-      "`let` tiene un scope de bloque",
-      "`var` no puede ser re-declarada"
+      "Una función que se cierra automáticamente",
+      "Un objeto que contiene métodos privados",
+      "Una función que tiene acceso al ámbito de una función externa",
+      "Un método para cerrar conexiones de red"
     ],
     "correctAnswer": 2
   },
   {
     "id": 11,
-    "question": "¿Qué función se usa para convertir un string en un número entero?",
-    "difficulty": "Easy",
+    "question": "¿Qué es el hoisting en JavaScript?",
+    "difficulty": "Medium",
     "options": [
-      "parseInt()",
-      "parseFloat()",
-      "Number()",
-      "toInteger()"
+      "Elevar físicamente el código",
+      "Mover declaraciones al principio de su ámbito",
+      "Una técnica de optimización de código",
+      "Un error de sintaxis"
     ],
-    "correctAnswer": 0
+    "correctAnswer": 1
   },
   {
     "id": 12,
-    "question": "¿Qué método se usa para agregar un elemento al final de un array?",
-    "difficulty": "Easy",
+    "question": "¿Qué es una promesa en JavaScript?",
+    "difficulty": "Medium",
     "options": [
-      "push()",
-      "unshift()",
-      "pop()",
-      "add()"
+      "Un objeto que representa la eventual finalización o falla de una operación asíncrona",
+      "Una función que siempre devuelve true",
+      "Un método para prometer que el código funcionará",
+      "Una variable que no puede ser modificada"
     ],
     "correctAnswer": 0
   },
   {
     "id": 13,
-    "question": "¿Qué método se usa para eliminar el último elemento de un array?",
-    "difficulty": "Easy",
+    "question": "¿Qué hace el método map() en un array?",
+    "difficulty": "Medium",
     "options": [
-      "shift()",
-      "splice()",
-      "pop()",
-      "remove()"
-    ],
-    "correctAnswer": 2
-  },
-  {
-    "id": 14,
-    "question": "¿Cómo se puede evitar modificar un objeto en JavaScript?",
-    "difficulty": "Easy",
-    "options": [
-      "Object.seal()",
-      "Object.freeze()",
-      "Object.lock()",
-      "delete object"
+      "Filtra los elementos del array",
+      "Crea un nuevo array con los resultados de llamar a una función para cada elemento",
+      "Ordena los elementos del array",
+      "Elimina elementos del array"
     ],
     "correctAnswer": 1
   },
   {
-    "id": 15,
-    "question": "¿Cuál de estos valores es considerado falsy en JavaScript?",
-    "difficulty": "Easy",
+    "id": 14,
+    "question": "¿Qué es el event bubbling en JavaScript?",
+    "difficulty": "Medium",
     "options": [
-      "{}",
-      "[]",
-      "0",
-      "\"false\""
+      "Crear múltiples eventos simultáneamente",
+      "Cancelar la propagación de eventos",
+      "La propagación de eventos desde el elemento hijo hasta el padre",
+      "Un método para crear animaciones de burbujas"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "id": 15,
+    "question": "¿Qué hace el operador spread (...) en JavaScript?",
+    "difficulty": "Medium",
+    "options": [
+      "Multiplica valores",
+      "Concatena strings",
+      "Expande elementos iterables en lugares donde se esperan cero o más argumentos",
+      "Crea un nuevo objeto"
     ],
     "correctAnswer": 2
   },
   {
     "id": 16,
-    "question": "¿Cómo se define una constante en JavaScript?",
-    "difficulty": "Easy",
+    "question": "¿Qué es una función de orden superior en JavaScript?",
+    "difficulty": "Medium",
     "options": [
-      "let myVar;",
-      "const myVar;",
-      "var myVar;",
-      "define myVar;"
+      "Una función que solo puede ser llamada una vez",
+      "Una función que toma otra función como argumento o devuelve una función",
+      "Una función que solo puede ser definida dentro de un objeto",
+      "Una función que no tiene parámetros"
     ],
     "correctAnswer": 1
   },
   {
     "id": 17,
-    "question": "¿Qué método se usa para convertir un array en un string?",
-    "difficulty": "Easy",
+    "question": "¿Qué es el patrón de módulo en JavaScript?",
+    "difficulty": "Hard",
     "options": [
-      "join()",
-      "split()",
-      "concat()",
-      "toString()"
+      "Una forma de organizar el código en archivos separados",
+      "Un patrón para crear objetos",
+      "Una técnica para encapsular datos y funcionalidad",
+      "Un método para importar librerías externas"
     ],
-    "correctAnswer": 0
+    "correctAnswer": 2
   },
   {
     "id": 18,
-    "question": "¿Qué devuelve `Boolean([])`?",
-    "difficulty": "Easy",
+    "question": "¿Qué es el 'temporal dead zone' en JavaScript?",
+    "difficulty": "Hard",
     "options": [
-      "true",
-      "false",
-      "undefined",
-      "null"
+      "Un error que ocurre cuando se usa var en lugar de let",
+      "El período entre la creación de una variable y su inicialización donde no se puede acceder a ella",
+      "Una zona del código donde las variables son temporalmente inaccesibles",
+      "Un bug en versiones antiguas de JavaScript"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id": 19,
+    "question": "¿Qué es una función pura en programación funcional?",
+    "difficulty": "Hard",
+    "options": [
+      "Una función que no tiene efectos secundarios y siempre devuelve el mismo resultado para los mismos argumentos",
+      "Una función que solo usa variables locales",
+      "Una función que no tiene parámetros",
+      "Una función que solo puede ser llamada una vez"
     ],
     "correctAnswer": 0
   },
   {
-    "id": 19,
-    "question": "¿Cuál de estos NO es un operador lógico en JavaScript?",
-    "difficulty": "Easy",
-    "options": [
-      "&&",
-      "||",
-      "!!",
-      "&"
-    ],
-    "correctAnswer": 3
-  },
-  {
     "id": 20,
-    "question": "¿Cómo se accede al primer elemento de un array?",
-    "difficulty": "Easy",
+    "question": "¿Qué es el patrón de diseño Observer en JavaScript?",
+    "difficulty": "Hard",
     "options": [
-      "array(0)",
-      "array[0]",
-      "array.first()",
-      "array.first"
+      "Un patrón para crear objetos singleton",
+      "Un patrón donde un objeto mantiene una lista de dependientes y los notifica automáticamente de cambios",
+      "Un patrón para manejar errores asincrónicos",
+      "Un patrón para optimizar el rendimiento de bucles"
     ],
     "correctAnswer": 1
   },
   {
     "id": 21,
-    "question": "¿Cuál es el resultado de `typeof NaN`?",
-    "difficulty": "Easy",
+    "question": "¿Qué es el 'event loop' en JavaScript?",
+    "difficulty": "Hard",
     "options": [
-      "NaN",
-      "number",
-      "undefined",
-      "object"
+      "Un bucle infinito en el código",
+      "Un mecanismo que permite que JavaScript maneje operaciones no bloqueantes",
+      "Una función que se ejecuta repetidamente",
+      "Un método para manejar eventos del DOM"
     ],
     "correctAnswer": 1
   },
   {
     "id": 22,
-    "question": "¿Qué función devuelve la longitud de un string?",
-    "difficulty": "Easy",
+    "question": "¿Qué es una promesa en estado 'pending'?",
+    "difficulty": "Medium",
     "options": [
-      "size()",
-      "count()",
-      "length()",
-      "strlen()"
+      "Una promesa que ha sido cumplida",
+      "Una promesa que ha sido rechazada",
+      "Una promesa que aún no ha sido cumplida ni rechazada",
+      "Una promesa que ha expirado"
     ],
     "correctAnswer": 2
   },
   {
     "id": 23,
-    "question": "¿Cómo se convierte un objeto en JSON?",
-    "difficulty": "Easy",
+    "question": "¿Qué método se utiliza para convertir un objeto JavaScript en una cadena JSON?",
+    "difficulty": "Medium",
     "options": [
-      "JSON.stringify()",
       "JSON.parse()",
-      "object.toJSON()",
-      "toJSON()"
+      "JSON.stringify()",
+      "JSON.toObject()",
+      "JSON.toString()"
     ],
-    "correctAnswer": 0
+    "correctAnswer": 1
   },
   {
     "id": 24,
-    "question": "¿Cómo se accede a las propiedades de un objeto?",
-    "difficulty": "Easy",
+    "question": "¿Qué es una expresión de función inmediatamente invocada (IIFE)?",
+    "difficulty": "Hard",
     "options": [
-      "obj(propiedad)",
-      "obj[propiedad]",
-      "obj.propiedad",
-      "2 y 3 son correctas"
+      "Una función que se llama automáticamente cuando se define",
+      "Una función que solo puede ser llamada una vez",
+      "Una función que no tiene nombre",
+      "Una función que se ejecuta inmediatamente después de ser definida"
     ],
     "correctAnswer": 3
   },
   {
     "id": 25,
-    "question": "¿Cuál de estas estructuras se usa para manejar errores?",
-    "difficulty": "Easy",
+    "question": "¿Qué hace el método reduce() en un array?",
+    "difficulty": "Hard",
     "options": [
-      "try...catch",
-      "if...else",
-      "throw...catch",
-      "switch...case"
+      "Reduce el tamaño del array",
+      "Ejecuta una función reductora en cada elemento del array, devolviendo un único valor resultante",
+      "Elimina elementos duplicados del array",
+      "Ordena los elementos del array en orden ascendente"
     ],
-    "correctAnswer": 0
+    "correctAnswer": 1
   },
   {
     "id": 26,
-    "question": "¿Qué método se usa para recorrer un array?",
-    "difficulty": "Easy",
+    "question": "¿Qué es el 'currying' en JavaScript?",
+    "difficulty": "Hard",
     "options": [
-      "map()",
-      "forEach()",
-      "reduce()",
-      "Todas las anteriores"
+      "Una técnica para cocinar con JavaScript",
+      "Un método para ordenar arrays",
+      "Una técnica de optimización de rendimiento",
+      "Una técnica de transformar una función con múltiples argumentos en una secuencia de funciones con un solo argumento"
     ],
     "correctAnswer": 3
   },
   {
     "id": 27,
-    "question": "¿Qué palabra clave se usa para definir una clase en JavaScript?",
-    "difficulty": "Easy",
+    "question": "¿Qué es el patrón de diseño Singleton en JavaScript?",
+    "difficulty": "Hard",
     "options": [
-      "class",
-      "constructor",
-      "object",
-      "new"
+      "Un patrón que permite crear solo una instancia de una clase",
+      "Un patrón para manejar eventos del DOM",
+      "Un patrón para crear funciones puras",
+      "Un patrón para optimizar bucles"
     ],
     "correctAnswer": 0
   },
   {
     "id": 28,
-    "question": "¿Cuál es el propósito de `this` en JavaScript?",
-    "difficulty": "Easy",
+    "question": "¿Qué es una función generadora en JavaScript?",
+    "difficulty": "Hard",
     "options": [
-      "Referenciar un objeto",
-      "Crear una variable",
-      "Definir una función",
-      "Importar un módulo"
-    ],
-    "correctAnswer": 0
-  },
-  {
-    "id": 29,
-    "question": "¿Qué método detiene la propagación de un evento?",
-    "difficulty": "Easy",
-    "options": [
-      "stop()",
-      "preventDefault()",
-      "stopPropagation()",
-      "halt()"
+      "Una función que genera números aleatorios",
+      "Una función que crea otras funciones",
+      "Una función que puede pausar su ejecución y reanudarla más tarde",
+      "Una función que no devuelve ningún valor"
     ],
     "correctAnswer": 2
   },
   {
-    "id": 30,
-    "question": "¿Qué función redondea un número al entero más cercano?",
-    "difficulty": "Easy",
+    "id": 29,
+    "question": "¿Qué es el 'debouncing' en JavaScript?",
+    "difficulty": "Hard",
     "options": [
-      "round()",
-      "ceil()",
-      "floor()",
-      "truncate()"
+      "Una técnica para prevenir que una función se llame demasiado frecuentemente",
+      "Un método para manejar errores en promesas",
+      "Una forma de optimizar bucles",
+      "Una técnica para crear animaciones suaves"
     ],
     "correctAnswer": 0
+  },
+  {
+    "id": 30,
+    "question": "¿Qué es una 'arrow function' en JavaScript?",
+    "difficulty": "Medium",
+    "options": [
+      "Una función que siempre devuelve un booleano",
+      "Una función con una sintaxis más corta que una función tradicional",
+      "Una función que solo puede usarse como callback",
+      "Una función que no puede tener parámetros"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id": 31,
+    "question": "¿Qué hace el operador '===' en JavaScript?",
+    "difficulty": "Easy",
+    "options": [
+      "Compara valores sin tener en cuenta el tipo",
+      "Asigna un valor a una variable",
+      "Compara valores y tipos",
+      "Compara solo tipos, no valores"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "id": 32,
+    "question": "¿Qué es el 'prototype' en JavaScript?",
+    "difficulty": "Medium",
+    "options": [
+      "Un tipo de dato primitivo",
+      "Un objeto del que otros objetos heredan propiedades",
+      "Una función que crea objetos",
+      "Un método para clonar objetos"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id": 33,
+    "question": "¿Qué es una 'callback function' en JavaScript?",
+    "difficulty": "Medium",
+    "options": [
+      "Una función que se llama a sí misma",
+      "Una función que se pasa como argumento a otra función y se ejecuta después",
+      "Una función que devuelve otra función",
+      "Una función que solo puede ser llamada una vez"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id": 34,
+    "question": "¿Qué es el 'scope' en JavaScript?",
+    "difficulty": "Medium",
+    "options": [
+      "El rango de números que una variable puede contener",
+      "El contexto en el que los valores y expresiones son visibles o pueden ser referenciados",
+      "Un método para limitar el acceso a variables",
+      "Una técnica para optimizar el rendimiento del código"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id": 35,
+    "question": "¿Qué es una 'Promise' en JavaScript?",
+    "difficulty": "Medium",
+    "options": [
+      "Un tipo de loop",
+      "Un objeto que representa la eventual finalización o falla de una operación asíncrona",
+      "Una función que siempre devuelve true",
+      "Un método para manejar errores síncronos"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id": 36,
+    "question": "¿Qué es el 'async/await' en JavaScript?",
+    "difficulty": "Hard",
+    "options": [
+      "Una forma de declarar variables asíncronas",
+      "Un método para crear funciones síncronas",
+      "Una sintaxis que facilita el trabajo con promesas",
+      "Un tipo de bucle para operaciones asíncronas"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "id": 37,
+    "question": "¿Qué es el 'event delegation' en JavaScript?",
+    "difficulty": "Medium",
+    "options": [
+      "Asignar eventos a elementos del DOM dinámicamente",
+      "Una técnica donde se asigna un evento a un elemento padre en lugar de a sus hijos",
+      "Un método para prevenir la propagación de eventos",
+      "Una forma de crear eventos personalizados"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id": 38,
+    "question": "¿Qué es una 'closure' en JavaScript?",
+    "difficulty": "Hard",
+    "options": [
+      "Un método para cerrar conexiones de red",
+      "Una función que se cierra automáticamente",
+      "Una función que tiene acceso al ámbito de una función externa incluso después de que la función externa haya terminado",
+      "Un tipo de error en JavaScript"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "id": 39,
+    "question": "¿Qué es el 'memoization' en JavaScript?",
+    "difficulty": "Hard",
+    "options": [
+      "Una técnica para recordar valores previamente calculados para mejorar el rendimiento",
+      "Un método para crear notas en el código",
+      "Una forma de almacenar variables en memoria",
+      "Una técnica para optimizar bucles"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 40,
+    "question": "¿Qué es el 'throttling' en JavaScript?",
+    "difficulty": "Hard",
+    "options": [
+      "Una técnica para limitar la velocidad de ejecución de una función",
+      "Un método para aumentar la velocidad de ejecución del código",
+      "Una forma de manejar errores en promesas",
+      "Una técnica para optimizar el uso de memoria"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 41,
+    "question": "¿Qué es el 'destructuring' en JavaScript?",
+    "difficulty": "Medium",
+    "options": [
+      "Una forma de eliminar propiedades de objetos",
+      "Una sintaxis que permite desempacar valores de arrays o propiedades de objetos en variables distintas",
+      "Un método para destruir objetos en memoria",
+      "Una técnica para dividir arrays"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id": 42,
+    "question": "¿Qué es el 'hoisting' en JavaScript?",
+    "difficulty": "Medium",
+    "options": [
+      "Elevar físicamente el código",
+      "Mover declaraciones al principio de su ámbito",
+      "Una técnica de optimización de código",
+      "Un error de sintaxis"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id": 43,
+    "question": "¿Qué es una 'Higher Order Function' en JavaScript?",
+    "difficulty": "Hard",
+    "options": [
+      "Una función que solo puede ser llamada una vez",
+      "Una función que toma otra función como argumento o devuelve una función",
+      "Una función que solo puede ser definida dentro de un objeto",
+      "Una función que no tiene parámetros"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id": 44,
+    "question": "¿Qué es el 'strict mode' en JavaScript?",
+    "difficulty": "Medium",
+    "options": [
+      "Un modo que hace que el código se ejecute más rápido",
+      "Un conjunto de reglas que hacen que el JavaScript sea más estricto en su interpretación",
+      "Un modo que previene todos los errores en el código",
+      "Un modo que solo permite el uso de funciones puras"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id": 45,
+    "question": "¿Qué es una 'shallow copy' en JavaScript?",
+    "difficulty": "Hard",
+    "options": [
+      "Una copia que solo duplica las referencias a objetos anidados",
+      "Una copia que duplica todos los niveles de un objeto",
+      "Una copia que solo funciona con arrays",
+      "Una copia que elimina todas las propiedades de un objeto"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 46,
+    "question": "¿Qué es el 'temporal dead zone' en JavaScript?",
+    "difficulty": "Hard",
+    "options": [
+      "Un error que ocurre cuando se usa var en lugar de let",
+      "El período entre la creación de una variable y su inicialización donde no se puede acceder a ella",
+      "Una zona del código donde las variables son temporalmente inaccesibles",
+      "Un bug en versiones antiguas de JavaScript"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id": 47,
+    "question": "¿Qué es el 'event loop' en JavaScript?",
+    "difficulty": "Hard",
+    "options": [
+      "Un bucle infinito en el código",
+      "Un mecanismo que permite que JavaScript maneje operaciones no bloqueantes",
+      "Una función que se ejecuta repetidamente",
+      "Un método para manejar eventos del DOM"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id": 48,
+    "question": "¿Qué es una 'pure function' en JavaScript?",
+    "difficulty": "Hard",
+    "options": [
+      "Una función que no tiene efectos secundarios y siempre devuelve el mismo resultado para los mismos argumentos",
+      "Una función que solo usa variables locales",
+      "Una función que no tiene parámetros",
+      "Una función que solo puede ser llamada una vez"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 49,
+    "question": "¿Qué es el 'prototype chain' en JavaScript?",
+    "difficulty": "Hard",
+    "options": [
+      "Una serie de funciones encadenadas",
+      "Un método para encadenar promesas",
+      "El mecanismo por el cual los objetos heredan características entre sí",
+      "Una técnica para optimizar el rendimiento de los objetos"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "id": 50,
+    "question": "¿Qué es una 'tagged template literal' en JavaScript?",
+    "difficulty": "Hard",
+    "options": [
+      "Un tipo especial de comentario en el código",
+      "Una forma de marcar strings para traducción",
+      "Una función que se puede usar para analizar template literals",
+      "Un método para crear strings multilínea"
+    ],
+    "correctAnswer": 2
   }
 ]

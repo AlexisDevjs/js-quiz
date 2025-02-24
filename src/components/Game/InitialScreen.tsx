@@ -13,7 +13,7 @@ export function InitialScreen () {
       <Header />
       <p className='text-center text-base max-w-[315px] my-1 text-gray-800 dark:text-gray-200'>
         ¿Eres un experto en JavaScript? Pon a prueba
-        tus conocimientos en este entretenido quiz interactivo.
+        tus conocimientos en este entretenido quiz.
       </p>
       <motion.button
         type='button'

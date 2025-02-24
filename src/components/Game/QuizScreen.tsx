@@ -44,7 +44,7 @@ export function QuizScreen () {
                 type='button'
                 onClick={() => selectAnswer(index)}
                 disabled={currentQuestionData?.selectedAnswer !== undefined}
-                className={`flex items-center px-5 py-2 font-semibold text-sm w-full text-gray-800/95 rounded-md hover:shadow ${getButtonStyle(
+                className={`text-left px-5 py-2 font-semibold text-sm w-full text-gray-800/95 rounded-md hover:shadow ${getButtonStyle(
                   index,
                   currentQuestionData
                 )}`}

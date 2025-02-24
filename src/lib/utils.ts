@@ -49,5 +49,5 @@ export function getButtonStyle (answerIndex: number, question: Question) {
 
   if (answerIndex === correctAnswer) return 'transition-all duration-200 bg-green-500/85 dark:text-white'
 
-  if (answerIndex === selectedAnswer) return 'transition-all duration-200 bg-red-500/60 dark:text-white'
+  if (answerIndex === selectedAnswer) return 'transition-all duration-200 bg-red-500/85 dark:text-white'
 }
