@@ -125,9 +125,9 @@ export function ScoreRingIcon (props: SVGProps<SVGSVGElement>) {
     >
       <defs>
         <linearGradient id='ringGradient' x1='0%' y1='0%' x2='100%' y2='0%'>
-          <stop offset='0%' stopColor='#8b5cf6' stopOpacity={0.2} />
-          <stop offset='50%' stopColor='#3b82f6' stopOpacity={0.2} />
-          <stop offset='100%' stopColor='#60a5fa' stopOpacity={0.2} />
+          <stop offset='0%' stopColor='#8b5cf6' stopOpacity={0.25} />
+          <stop offset='50%' stopColor='#3b82f6' stopOpacity={0.25} />
+          <stop offset='100%' stopColor='#60a5fa' stopOpacity={0.25} />
         </linearGradient>
       </defs>
       <circle

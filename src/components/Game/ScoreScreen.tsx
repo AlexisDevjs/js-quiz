@@ -54,11 +54,11 @@ export function ScoreScreen () {
         </div>
       </div>
 
-      <section className='text-center mt-7 mb-6'>
+      <section className='text-center mt-7'>
         <span className='text-sm text-blue-500 bg-blue-100/75 dark:bg-blue-400 py-1 px-4 font-semibold rounded-full dark:text-white'>
           {score} / {totalQuestions} aciertos
         </span>
-        <h2 className='text-2xl font-bold mt-3 mb-2 dark:text-white'>
+        <h2 className='text-2xl font-bold mt-5 mb-2 dark:text-white'>
           {percentage >= 90
             ? '¡Desempeño Sobresaliente!'
             : percentage >= 70
@@ -78,7 +78,7 @@ export function ScoreScreen () {
         </p>
       </section>
 
-      <div className='space-y-3'>
+      <div className='space-y-3 mt-3'>
         <button
           type='button'
           onClick={restartQuiz}
