@@ -13,12 +13,17 @@ export interface Question {
   isCorrectSelected: boolean | undefined
 }
 
+export type Difficulty = 'Easy' | 'Medium' | 'Hard'
+
 export interface QuizState {
   questions: Question[]
+  difficulty: Difficulty
   limitQuestions: number
   currentQuestion: number
   score: number
   gameState: typeof GAME_STATE[keyof typeof GAME_STATE],
+  setDifficulty: (difficulty: Difficulty) => void
+  setLimitQuestions: (limit: number) => void
   getQuestions: () => Promise<void>
   selectAnswer: (answerIndex: number) => void
   nextQuestion: () => void

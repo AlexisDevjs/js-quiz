@@ -5,6 +5,7 @@ import { GAME_STATE } from '../lib/app-constants'
 
 export const useQuizStore = create<QuizState>((set, get) => ({
   questions: [],
+  difficulty: 'Easy',
   limitQuestions: 10,
   currentQuestion: 0,
   score: 0,
@@ -15,6 +16,10 @@ export const useQuizStore = create<QuizState>((set, get) => ({
     const questions = await getLimitedQuestions(limitQuestions)
     set({ questions })
   },
+
+  setDifficulty: (difficulty) => set({ difficulty }),
+
+  setLimitQuestions: (limit) => set({ limitQuestions: limit }),
 
   startGame: async () => {
     await get().getQuestions()

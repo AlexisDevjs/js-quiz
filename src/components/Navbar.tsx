@@ -1,3 +1,4 @@
+import GameSettings from './Game/GameSettings'
 import { GithubIcon } from './icons'
 import { ToggleTheme } from './ToggleTheme'
 
@@ -13,6 +14,7 @@ export default function Navbar () {
       >
         <GithubIcon />
       </a>
+      <GameSettings />
       <ToggleTheme />
     </nav>
   )
