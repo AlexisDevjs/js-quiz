@@ -1,4 +1,4 @@
-import type { Question, Theme } from '../../types'
+import type { Difficulty, Question, Theme } from '../../types'
 
 export function getThemeFromStorage () {
   const savedTheme = localStorage.getItem('theme')
@@ -12,7 +12,7 @@ export function getThemeFromStorage () {
   return match.matches ? 'dark' : 'light'
 }
 
-export async function fetchQuestions ():Promise<Question[]> {
+export async function fetchQuestions (): Promise<Question[]> {
   try {
     const response = await fetch('/questions.json')
     const data: Question[] = await response.json()
@@ -30,14 +30,18 @@ export async function fetchQuestions ():Promise<Question[]> {
   }
 }
 
-export async function getLimitedQuestions (limit: number) {
+export async function getLimitedQuestions (
+  difficulty: Difficulty,
+  limit: number
+) {
   const questions = await fetchQuestions()
-  return questions.slice(0, limit)
+  return questions.filter((q) => q.difficulty === difficulty).slice(0, limit)
 }
 
 export function getButtonStyle (answerIndex: number, question: Question) {
   const { selectedAnswer, correctAnswer } = question
-  const defaultStyle = 'ring ring-gray-400/40 hover:bg-gray-100 hover:shadow hover:cursor-pointer dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white transition-all duration-200'
+  const defaultStyle
+    = 'ring ring-gray-400/40 hover:bg-gray-100 hover:shadow hover:cursor-pointer dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white transition-all duration-200'
 
   if (selectedAnswer === undefined) {
     return defaultStyle
@@ -47,7 +51,9 @@ export function getButtonStyle (answerIndex: number, question: Question) {
     return defaultStyle
   }
 
-  if (answerIndex === correctAnswer) return 'transition-all duration-200 bg-green-500/85 dark:text-white'
+  if (answerIndex === correctAnswer)
+    return 'transition-all duration-200 bg-green-500/85 dark:text-white'
 
-  if (answerIndex === selectedAnswer) return 'transition-all duration-200 bg-red-500/85 dark:text-white'
+  if (answerIndex === selectedAnswer)
+    return 'transition-all duration-200 bg-red-500/85 dark:text-white'
 }

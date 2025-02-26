@@ -12,8 +12,8 @@ export const useQuizStore = create<QuizState>((set, get) => ({
   gameState: GAME_STATE.IDLE,
 
   getQuestions: async () => {
-    const { limitQuestions } = get()
-    const questions = await getLimitedQuestions(limitQuestions)
+    const { difficulty, limitQuestions } = get()
+    const questions = await getLimitedQuestions(difficulty, limitQuestions)
     set({ questions })
   },
 
@@ -71,7 +71,7 @@ export const useQuizStore = create<QuizState>((set, get) => ({
     })
   },
 
-  quitGame : () => {
+  quitGame: () => {
     set({
       questions: [],
       currentQuestion: 0,

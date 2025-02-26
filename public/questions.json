@@ -358,5 +358,485 @@
       "caseUp()"
     ],
     "correctAnswer": 0
+  },
+  {
+    "id": 31,
+    "question": "¿Qué es una closure en JavaScript?",
+    "difficulty": "Medium",
+    "options": [
+      "Función con acceso a su ámbito exterior",
+      "Función sin parámetros",
+      "Objeto con métodos privados",
+      "Método de cierre de conexiones"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 32,
+    "question": "¿Qué hace el método map() en un array?",
+    "difficulty": "Medium",
+    "options": [
+      "Crea un nuevo array transformado",
+      "Modifica el array original",
+      "Filtra elementos del array",
+      "Ordena el array"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 33,
+    "question": "¿Qué es el hoisting en JavaScript?",
+    "difficulty": "Medium",
+    "options": [
+      "Elevar declaraciones al inicio del ámbito",
+      "Elevar objetos",
+      "Optimizar el código",
+      "Mover funciones al final"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 34,
+    "question": "¿Qué es una promesa en JavaScript?",
+    "difficulty": "Medium",
+    "options": [
+      "Objeto para operaciones asíncronas",
+      "Función que siempre retorna true",
+      "Método de manejo de errores",
+      "Tipo de bucle"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 35,
+    "question": "¿Qué es el event bubbling?",
+    "difficulty": "Medium",
+    "options": [
+      "Propagación de eventos hacia arriba",
+      "Creación de múltiples eventos",
+      "Cancelación de eventos",
+      "Método para animar elementos"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 36,
+    "question": "¿Qué hace el operador spread (...)?",
+    "difficulty": "Medium",
+    "options": [
+      "Expande elementos iterables",
+      "Multiplica valores",
+      "Concatena strings",
+      "Crea un nuevo objeto"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 37,
+    "question": "¿Qué es una función de orden superior?",
+    "difficulty": "Medium",
+    "options": [
+      "Función que opera con otras funciones",
+      "Función sin retorno",
+      "Función con muchos parámetros",
+      "Función que se llama a sí misma"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 38,
+    "question": "¿Qué es el patrón de módulo en JavaScript?",
+    "difficulty": "Medium",
+    "options": [
+      "Técnica de encapsulación",
+      "Método de importación",
+      "Tipo de bucle",
+      "Estilo de nombrar variables"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 39,
+    "question": "¿Qué es el 'temporal dead zone'?",
+    "difficulty": "Medium",
+    "options": [
+      "Periodo antes de la inicialización de let/const",
+      "Área de memoria no utilizada",
+      "Función temporal",
+      "Zona de código inalcanzable"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 40,
+    "question": "¿Qué es una función pura?",
+    "difficulty": "Medium",
+    "options": [
+      "Función sin efectos secundarios",
+      "Función sin parámetros",
+      "Función que siempre retorna true",
+      "Función que no usa variables globales"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 41,
+    "question": "¿Qué es el patrón Observer?",
+    "difficulty": "Medium",
+    "options": [
+      "Notifica cambios a dependientes",
+      "Observa errores en el código",
+      "Patrón de diseño de UI",
+      "Método de depuración"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 42,
+    "question": "¿Qué es el event loop en JavaScript?",
+    "difficulty": "Medium",
+    "options": [
+      "Maneja operaciones asíncronas",
+      "Bucle infinito en el código",
+      "Método para crear eventos",
+      "Función de temporización"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 43,
+    "question": "¿Qué es el método reduce() en arrays?",
+    "difficulty": "Medium",
+    "options": [
+      "Reduce array a un solo valor",
+      "Elimina elementos duplicados",
+      "Ordena el array",
+      "Invierte el orden del array"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 44,
+    "question": "¿Qué es la desestructuración en JavaScript?",
+    "difficulty": "Medium",
+    "options": [
+      "Extraer valores de objetos/arrays",
+      "Destruir objetos en memoria",
+      "Dividir arrays",
+      "Método de depuración"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 45,
+    "question": "¿Qué es una arrow function?",
+    "difficulty": "Medium",
+    "options": [
+      "Función con sintaxis más corta",
+      "Función que apunta a otra",
+      "Función que retorna un booleano",
+      "Método de ordenamiento"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 46,
+    "question": "¿Qué es el modo estricto en JavaScript?",
+    "difficulty": "Medium",
+    "options": [
+      "Conjunto de reglas más estrictas",
+      "Modo de depuración",
+      "Optimización automática",
+      "Modo de compatibilidad"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 47,
+    "question": "¿Qué es una IIFE?",
+    "difficulty": "Medium",
+    "options": [
+      "Función que se autoejecuta",
+      "Bucle infinito",
+      "Método de importación",
+      "Interfaz de usuario"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 48,
+    "question": "¿Qué es el método bind()?",
+    "difficulty": "Medium",
+    "options": [
+      "Fija el valor de 'this'",
+      "Une dos arrays",
+      "Vincula eventos",
+      "Crea una copia de una función"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 49,
+    "question": "¿Qué es el patrón de diseño Singleton?",
+    "difficulty": "Medium",
+    "options": [
+      "Garantiza una única instancia",
+      "Crea múltiples instancias",
+      "Patrón de manejo de errores",
+      "Método de ordenamiento"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 50,
+    "question": "¿Qué es el método Object.freeze()?",
+    "difficulty": "Medium",
+    "options": [
+      "Hace inmutable un objeto",
+      "Congela la ejecución del código",
+      "Detiene un bucle",
+      "Previene la creación de objetos"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 51,
+    "question": "¿Qué es una función generadora?",
+    "difficulty": "Hard",
+    "options": [
+      "Función que puede pausarse",
+      "Función que genera números aleatorios",
+      "Función que crea otras funciones",
+      "Método de creación de objetos"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 52,
+    "question": "¿Qué es el patrón de diseño Proxy?",
+    "difficulty": "Hard",
+    "options": [
+      "Controla acceso a un objeto",
+      "Método de conexión a internet",
+      "Patrón de manejo de errores",
+      "Técnica de optimización"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 53,
+    "question": "¿Qué es una WeakMap?",
+    "difficulty": "Hard",
+    "options": [
+      "Colección de pares clave-valor con claves débiles",
+      "Mapa con pocos elementos",
+      "Estructura de datos para algoritmos",
+      "Tipo de array multidimensional"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 54,
+    "question": "¿Qué es el patrón de diseño Decorator?",
+    "difficulty": "Hard",
+    "options": [
+      "Añade funcionalidades dinámicamente",
+      "Decora la interfaz de usuario",
+      "Optimiza el rendimiento",
+      "Maneja errores en tiempo de ejecución"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 55,
+    "question": "¿Qué es una Proxy en JavaScript?",
+    "difficulty": "Hard",
+    "options": [
+      "Objeto que personaliza comportamiento",
+      "Método de conexión a servidores",
+      "Tipo de función asíncrona",
+      "Patrón de diseño estructural"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 56,
+    "question": "¿Qué es el patrón de diseño Factory?",
+    "difficulty": "Hard",
+    "options": [
+      "Crea objetos sin especificar clase",
+      "Maneja la creación de hilos",
+      "Optimiza la memoria",
+      "Gestiona conexiones de base de datos"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 57,
+    "question": "¿Qué es una promesa A+?",
+    "difficulty": "Hard",
+    "options": [
+      "Especificación de promesas",
+      "Promesa de alto rendimiento",
+      "Biblioteca de JavaScript",
+      "Tipo de dato en TypeScript"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 58,
+    "question": "¿Qué es el patrón de diseño Mediator?",
+    "difficulty": "Hard",
+    "options": [
+      "Reduce dependencias entre objetos",
+      "Maneja conflictos en el código",
+      "Optimiza consultas a bases de datos",
+      "Controla el flujo de la aplicación"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 59,
+    "question": "¿Qué es una función throttle?",
+    "difficulty": "Hard",
+    "options": [
+      "Limita frecuencia de llamadas",
+      "Acelera ejecución de funciones",
+      "Maneja errores asíncronos",
+      "Optimiza rendimiento de bucles"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 60,
+    "question": "¿Qué es el patrón de diseño Command?",
+    "difficulty": "Hard",
+    "options": [
+      "Encapsula solicitud como objeto",
+      "Controla flujo de comandos CLI",
+      "Optimiza ejecución de scripts",
+      "Maneja entrada de usuario"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 61,
+    "question": "¿Qué es una función debounce?",
+    "difficulty": "Hard",
+    "options": [
+      "Retrasa ejecución de función",
+      "Acelera carga de páginas",
+      "Maneja eventos del teclado",
+      "Optimiza animaciones CSS"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 62,
+    "question": "¿Qué es el patrón de diseño Strategy?",
+    "difficulty": "Hard",
+    "options": [
+      "Permite intercambiar algoritmos",
+      "Planifica ejecución de tareas",
+      "Optimiza estrategias de caché",
+      "Maneja estrategias de autenticación"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 63,
+    "question": "¿Qué es una función memoize?",
+    "difficulty": "Hard",
+    "options": [
+      "Cachea resultados de funciones",
+      "Memoriza variables globales",
+      "Optimiza uso de memoria",
+      "Maneja fugas de memoria"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 64,
+    "question": "¿Qué es el patrón de diseño Observer?",
+    "difficulty": "Hard",
+    "options": [
+      "Define dependencia uno a muchos",
+      "Observa cambios en el DOM",
+      "Monitorea el rendimiento",
+      "Gestiona observadores de eventos"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 65,
+    "question": "¿Qué es una función curry?",
+    "difficulty": "Hard",
+    "options": [
+      "Transforma función multiargumento",
+      "Optimiza funciones recursivas",
+      "Maneja curry en programación funcional",
+      "Convierte strings a funciones"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 66,
+    "question": "¿Qué es el patrón de diseño Composite?",
+    "difficulty": "Hard",
+    "options": [
+      "Compone objetos en estructuras de árbol",
+      "Combina múltiples clases",
+      "Crea interfaces compuestas",
+      "Maneja composición de funciones"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 67,
+    "question": "¿Qué es una función trampoline?",
+    "difficulty": "Hard",
+    "options": [
+      "Evita desbordamiento de pila",
+      "Optimiza saltos en el código",
+      "Maneja excepciones en recursión",
+      "Implementa lógica de salto condicional"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 68,
+    "question": "¿Qué es el patrón de diseño Chain of Responsibility?",
+    "difficulty": "Hard",
+    "options": [
+      "Pasa solicitudes a lo largo de una cadena",
+      "Maneja cadenas de eventos",
+      "Optimiza cadenas de promesas",
+      "Implementa lógica de responsabilidad compartida"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 69,
+    "question": "¿Qué es una función de orden superior?",
+    "difficulty": "Hard",
+    "options": [
+      "Toma o devuelve otra función",
+      "Función con prioridad alta",
+      "Optimiza otras funciones",
+      "Maneja funciones de sistema"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 70,
+    "question": "¿Qué es el patrón de diseño Flyweight?",
+    "difficulty": "Hard",
+    "options": [
+      "Minimiza uso de memoria",
+      "Optimiza objetos ligeros",
+      "Maneja estructuras de datos eficientes",
+      "Implementa caché de objetos"
+    ],
+    "correctAnswer": 0
   }
 ]

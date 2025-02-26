@@ -1,52 +1,9 @@
-import type { ChangeEvent } from 'react'
-import { useEffect, useState } from 'react'
 import { SettingsIcon } from '../icons'
 import { AnimatePresence, motion } from 'motion/react'
-import { useQuizStore } from '../../zustand/useQuizStore'
-import type { Difficulty } from '../../../types'
-import { GAME_STATE } from '../../lib/app-constants'
+import { useGameSettings } from '../../hooks/useGameSettings'
 
 export default function GameSettings () {
-  const limitQuestions = useQuizStore((state) => state.limitQuestions)
-  const difficulty = useQuizStore((state) => state.difficulty)
-
-  const [showSettings, setShowSettings] = useState(false)
-  const [showConfirmRestart, setShowConfirmRestart] = useState(false)
-  const [localLimitQuestions, setLocalLimitQuestions] = useState(limitQuestions)
-  const [localDifficulty, setLocalDifficulty] = useState<Difficulty>(difficulty)
-
-  const gameState = useQuizStore((state) => state.gameState)
-  const setLimitQuestions = useQuizStore((state) => state.setLimitQuestions)
-  const setDifficulty = useQuizStore((state) => state.setDifficulty)
-  const restartQuiz = useQuizStore((state) => state.restartQuiz)
-
-  const handleDifficultyChange = (e: ChangeEvent<HTMLSelectElement>) => {
-    setLocalDifficulty(e.currentTarget.value as Difficulty)
-  }
-
-  const handleLimitChange = (e: ChangeEvent<HTMLSelectElement>) => {
-    setLocalLimitQuestions(parseInt(e.currentTarget.value))
-  }
-  const saveSetting = () => {
-    setLimitQuestions(localLimitQuestions)
-    setDifficulty(localDifficulty)
-    setShowSettings(false)
-  }
-
-  const handSaveSetting = () => {
-    if (gameState === GAME_STATE.PLAYING) {
-      return setShowConfirmRestart(true)
-    }
-
-    saveSetting()
-  }
-
-  useEffect(() => {
-    if (showSettings) {
-      setLocalDifficulty(difficulty)
-      setLocalLimitQuestions(limitQuestions)
-    }
-  }, [difficulty, showSettings, limitQuestions])
+  const gameSettings = useGameSettings()
 
   return (
     <>
@@ -54,13 +11,13 @@ export default function GameSettings () {
         type='button'
         title='Settings'
         className='hover:cursor-pointer p-2 rounded-lg transition hover:bg-gray-200 dark:hover:bg-gray-700'
-        onClick={() => setShowSettings(true)}
+        onClick={() => gameSettings.setShowSettings(true)}
       >
         <SettingsIcon className='w-6 h-6 text-gray-700 dark:text-gray-300' />
       </button>
 
       <AnimatePresence>
-        {showSettings && (
+        {gameSettings.showSettings && (
           <>
             <motion.div
               initial={{ opacity: 0 }}
@@ -68,10 +25,10 @@ export default function GameSettings () {
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3 }}
               className='fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-40'
-              onClick={() => setShowSettings(false)}
+              onClick={() => gameSettings.setShowSettings(false)}
             />
 
-            {!showConfirmRestart ? (
+            {!gameSettings.showConfirmRestart ? (
               <motion.article
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -85,7 +42,7 @@ export default function GameSettings () {
                   </h2>
                   <button
                     type='button'
-                    onClick={() => setShowSettings(false)}
+                    onClick={() => gameSettings.setShowSettings(false)}
                     className='text-gray-500 text-xl hover:text-red-500 transition hover:cursor-pointer'
                   >
                     ✕
@@ -103,8 +60,8 @@ export default function GameSettings () {
                     <select
                       id='difficulty'
                       name='difficulty'
-                      value={localDifficulty}
-                      onChange={handleDifficultyChange}
+                      value={gameSettings.localDifficulty}
+                      onChange={gameSettings.handleDifficultyChange}
                       className='mt-1 w-full p-2 rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white'
                     >
                       <option value='Easy'>Fácil</option>
@@ -123,8 +80,8 @@ export default function GameSettings () {
                     <select
                       id='limit'
                       name='limitQuestions'
-                      value={localLimitQuestions}
-                      onChange={handleLimitChange}
+                      value={gameSettings.localLimitQuestions}
+                      onChange={gameSettings.handleLimitChange}
                       className='mt-1 w-full p-2 rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white'
                     >
                       <option value='10'>10</option>
@@ -137,13 +94,13 @@ export default function GameSettings () {
                     <button
                       type='button'
                       className='px-4 py-2 bg-gray-300 text-gray-700 rounded-lg hover:bg-gray-400 transition'
-                      onClick={() => setShowSettings(false)}
+                      onClick={() => gameSettings.setShowSettings(false)}
                     >
                       Cancelar
                     </button>
                     <button
                       type='button'
-                      onClick={handSaveSetting}
+                      onClick={gameSettings.handSaveSettings}
                       className='px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition'
                     >
                       Guardar
@@ -165,12 +122,7 @@ export default function GameSettings () {
                   <button
                     type='button'
                     className='px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition'
-                    onClick={() => {
-                      saveSetting()
-                      restartQuiz()
-                      setShowConfirmRestart(false)
-                      setShowSettings(false)
-                    }}
+                    onClick={gameSettings.confirmRestart}
                   >
                     Reiniciar
                   </button>
@@ -178,8 +130,8 @@ export default function GameSettings () {
                     type='button'
                     className='px-4 py-2 bg-gray-300 text-gray-700 rounded-lg hover:bg-gray-400 transition'
                     onClick={() => {
-                      setShowConfirmRestart(false)
-                      setShowSettings(false)
+                      gameSettings.setShowConfirmRestart(false)
+                      gameSettings.setShowSettings(false)
                     }}
                   >
                     Cancelar
